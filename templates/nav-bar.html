@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <!-- Separate Box for Home Link -->
+            <li class="nav-item mx-3"> <!-- Added margin between the items -->
+                <div class="nav-box">
+                    <a class="nav-link custom-link" href="{% url 'ml_app:home' %}">Home</a>
+                </div>
+            </li>
+            <!-- Separate Box for About Link -->
+            <li class="nav-item mx-3"> <!-- Added margin between the items -->
+                <div class="nav-box">
+                    <a class="nav-link custom-link" href="{% url 'ml_app:about' %}">About</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    /* Custom Navbar Styling */
+    .custom-navbar {
+    background-image: url("/static/images/background1.jpg"); /* Add background image */
+    background-size: cover; /* Cover the entire navbar */
+    background-position:initial ;* Center the image */
+    background-repeat: no-repeat; *Prevent repeating of the image*/
+    padding: 10px; /* Remove padding */
+
+}
+
+
+    /* Separate Box for Each Navigation Link */
+    .nav-box {
+        display: inline-block; /* Ensures each box is inline */
+        background-color: rgba(0, 0, 0, 0.1); /* Transparent white background */
+        padding: 10px 10px; /* Increased padding for more clickable area */
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.0); /* White shadow around the box */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+        cursor: pointer; /* Pointer cursor for better UX */
+    }
+
+    .nav-box:hover {
+        transform: scale(1.05); /* Slightly increase scale on hover */
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5); /* More pronounced shadow on hover */
+    }
+
+    /* Center Navigation Links */
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Custom Link Styling */
+    .custom-link {
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease;
+        display: block; /* Makes the entire box clickable */
+    }
+
+    /* Highlight Effect on Hover */
+    .custom-link:hover {
+        color: #ffeb3b; /* Change text color on hover */
+    }
+</style>

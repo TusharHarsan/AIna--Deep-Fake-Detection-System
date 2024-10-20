@@ -1,0 +1,136 @@
+<footer class="footer">
+  <div class="container">
+
+      <!-- Existing static content -->
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const footer = document.querySelector("footer .container");
+
+      // Adding the dynamic content to your existing footer container
+      const logo = document.createElement("div");
+      logo.className = "logo";
+      logo.textContent = "AIna";
+      footer.appendChild(logo);
+
+      const navLinks = document.createElement("div");
+      navLinks.className = "nav-links";
+      const links = ["About Us", "Careers", "Contact Us", "Blog", "Privacy Policy"];
+      const hrefs = ["#about", "#careers", "#contact", "#blog", "#privacy"];
+      links.forEach((link, index) => {
+          const a = document.createElement("a");
+          a.href = hrefs[index];
+          a.textContent = link;
+          navLinks.appendChild(a);
+      });
+      footer.appendChild(navLinks);
+
+      const newsletter = document.createElement("div");
+      newsletter.className = "newsletter";
+      const emailInput = document.createElement("input");
+      emailInput.type = "email";
+      emailInput.placeholder = "Work Email";
+      newsletter.appendChild(emailInput);
+      const subscribeButton = document.createElement("button");
+      subscribeButton.textContent = "Subscribe";
+      newsletter.appendChild(subscribeButton);
+      footer.appendChild(newsletter);
+
+      const badges = document.createElement("div");
+      badges.className = "badges";
+      const badgeImages = ["badge1.png", "badge2.png", "badge3.png", "badge4.png", "badge5.png", "badge6.png"];
+      badgeImages.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = `Badge ${badgeImages.indexOf(src) + 1}`;
+          badges.appendChild(img);
+      });
+      footer.appendChild(badges);
+
+      const contactInfo = document.createElement("div");
+      contactInfo.className = "contact-info";
+      const email = document.createElement("p");
+      email.textContent = "Email: teamgallon@yahoo.com";
+      contactInfo.appendChild(email);
+      const address = document.createElement("p");
+      address.textContent = "Address: Plot No's: 8-11, Tech Zone II, Greater Noida - 201310, Uttar Pradesh, India";
+      contactInfo.appendChild(address);
+      const university = document.createElement("p");
+      university.textContent = "BENNETT UNIVERSITY";
+      contactInfo.appendChild(university);
+      footer.appendChild(contactInfo);
+
+      const copyright = document.createElement("div");
+      copyright.className = "copyright";
+      copyright.textContent = "© 2024 Gallon - All Rights Reserved";
+      footer.appendChild(copyright);
+
+      const style = document.createElement("style");
+      style.textContent = `
+          body {
+              font-family: Arial, sans-serif;
+          }
+          .footer {
+              background-image: url('/static/images/background1.jpg'); /* Replace with your image URL */
+              background-size: cover; /* Ensures the image covers the entire footer */
+              background-position: center; /* Centers the image */
+              color: #fff;
+              padding: 0px 0;
+              text-align: center;
+          }
+          .footer .logo {
+              font-size: 50px;
+              font-weight: bold;
+              margin-bottom: 30px;
+          }
+          .footer .nav-links {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-bottom: 30px;
+          }
+          .footer .nav-links a {
+              color: #fff;
+              text-decoration: none;
+              margin: 0 15px;
+          }
+          .footer .newsletter {
+              margin-top: 30px;
+          }
+          .footer .newsletter input[type="email"] {
+              padding: 10px;
+              margin-right: 10px;
+              border: none;
+              border-radius: 5px;
+          }
+          .footer .newsletter button {
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              background-color: rgb(13, 81, 228);
+              color: #fff;
+              cursor: pointer;
+          }
+          .footer .newsletter button:hover {
+              background-color: rgb(10, 65, 185);
+          }
+          .footer .badges {
+              margin-top: 20px;
+          }
+          .footer .badges img {
+              margin: 20px;
+              height: 40px;
+          }
+          .footer .contact-info {
+              margin-top: 20px;
+          }
+          .footer .copyright {
+              margin-top: 20px;
+              font-size: 14px;
+          }
+      `;
+      document.head.appendChild(style);
+  });
+</script>

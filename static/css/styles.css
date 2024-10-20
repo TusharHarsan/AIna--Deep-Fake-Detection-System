@@ -1,0 +1,249 @@
+body {
+    height: 0%;
+    background-image: url("/static/images/background1.png");
+    background-size: initial;
+    transform: rotate(360deg); /* Rotate the entire body */
+}
+
+
+
+
+.width-300{
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0px 9px 2px #ccc;
+}
+
+.width-400{
+    width: 500px;
+    margin: auto;
+    background-color:   rgb(13,81,228,0.5);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0 0px 9px 2px #000000;
+}
+
+.width-50{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
+.width-500{
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0px 9px 2px #ccc;
+}
+
+#videos{
+    display: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.preprocess {
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+#preprocessed_images {
+  white-space: nowrap;
+  width: auto;
+  height: 250px;
+  padding: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-shadow: 0 0px 9px 2px #ccc;
+}
+
+#faces_images {
+    white-space: nowrap;
+    width: auto;
+    height: 150px;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-shadow: 0 0px 9px 2px #ccc;
+}
+
+.faces {
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+#heatmap_images{
+    white-space: nowrap;
+    width: auto;
+    height: 200px;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-shadow: 0 0px 9px 2px #ccc;
+    margin-bottom: 20px;
+}
+
+.heat-map {
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+/* span.spinner-border {
+    display: none;
+} */
+
+/* General Body Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color, #000000);
+    color: var(--text-color, #000000);
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/background1.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center; /* Center the background image */
+}
+
+/* Background Styling */
+.bg {
+    background-image: url("/static/images/background1.jpg");
+    background-size: initial;
+    transform: rotate(360deg); /* Rotate the entire body */
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Container Styling */
+.width-400 {
+    width: 600px;
+    margin: auto;
+    background-color: rgba(13, 81, 228, 0.8); /* Corrected the rgba syntax */
+    margin-top: 100px;
+    margin-bottom: 150px;
+    box-shadow: 0 0 9px 2px #000000; /* Default box shadow is black */
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+}
+
+/* Hover effect */
+.width-400:hover {
+    transform: scale(1.05); /* Increases size slightly on hover */
+    box-shadow: 0 0 12px 4px #ffffff; /* Changes box shadow to white */
+}
+
+
+/* Button Styling */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Style */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Neumorphism Style */
+.neumorphic {
+    border-radius: 12px;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 14px #bebebe, 
+                -7px -7px 14px #ffffff;
+    padding: 20px;
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Toggle */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Scrollable Sections */
+#preprocessed_images, #faces_images, #heatmap_images {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 0 0px 9px 2px #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* Animation Styles (Using AOS) */
+[data-aos] {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+
+.text-white {
+    color: white;
+}
+
+.container {
+    color: white; /* Ensures all text within .container is white */
+}
+
+
